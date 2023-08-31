@@ -28,6 +28,9 @@ export const turn = ({ minesRemaining, opponentUsedRadar }) => {
   } else if (state.position.y == 9 && state.position.x < 9){
     state.position.y-=1;
     state.position.x+=1;
+  } else if (state.position.y == 9 && state.position.x == 9) {
+    state.position.x-=1;
+    state.position.y-=1;
   } else {
     state.position.x+=1;
     state.position.y+=1;
