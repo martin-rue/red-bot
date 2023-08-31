@@ -35,8 +35,10 @@ export const turn = ({ minesRemaining, opponentUsedRadar }) => {
 
   if(opponentUsedRadar) {
     return move(state.position.x, state.position.y);
+  } else if (state.turn === 21) {
+    return layMine(state.opponent.x, state.opponent.y);
   } else if (state.turn === 1) {
-    return layMine(7,2);
+    return move(7,2);
   } else if (state.turn % 2 === 0) {
     return runRadar(); 
   } else {
