@@ -16,7 +16,7 @@ export const start = ({ radar }) => {
   state.gridSize = result.gridSize;
   state.position = result.position;
 };
-
+//...
 export const turn = ({ minesRemaining, opponentUsedRadar }) => {
   state.turn += 1;
   state.minesRemaining = minesRemaining;
